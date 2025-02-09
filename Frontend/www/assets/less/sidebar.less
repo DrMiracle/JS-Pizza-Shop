@@ -1,0 +1,100 @@
+@import "main.less";
+
+.sidebar {
+  height: 100%;
+  width: @sidebarWidth;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  box-shadow: 2px -1px 50px 0px rgba(34, 60, 80, 0.29);
+}
+
+#cart{
+  margin: @navbarHeight 0;
+}
+
+.order{
+  width: @sidebarWidth;
+  border: none;
+  position: fixed;
+  z-index: 5;
+  .card-header{
+    background: white;
+    height: @navbarHeight;
+  }
+  span{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .badge-pill{
+    background: #ec890e;
+    color: white;
+    font-size: 14px;
+    margin-left: 6px;
+  }
+  .delete{
+    font-size: 8px;
+  }
+}
+
+.pizzas-order{
+  width: @sidebarWidth;
+  border: none;
+  background-color: #f5f5f5;
+  padding: 12px 0px 12px 20px;
+  h5{
+    color: @mainColor;
+  }
+  .badge{
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .price{
+    margin: auto;
+    font-weight: bold;
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+  }
+  .btn-not-close{
+    align-items: center;
+  }
+  .btn-circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+  }
+  .bg-img {
+    position: absolute;
+    right: -50px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+#to-order{
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: @sidebarWidth;
+  height: @navbarHeight;
+  span{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .btn-order{
+    height: 40px;
+    width: 200px;
+    margin: 4px 60px;
+    background: #ec890e;
+    color: white;
+    align-items: center;
+  }
+}

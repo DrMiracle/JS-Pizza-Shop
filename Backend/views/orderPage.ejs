@@ -1,0 +1,75 @@
+<% include common/header.ejs %>
+
+<div class="container-fluid p-0">
+    <div class="row m-0 d-flex justify-content-center">
+        <div class="col-7 col-sm-7 col-md-8 col-lg-9 col-xl-10 pt-5 pl-5 pr-5">
+            <form>
+                <div class="form-group row pl-3 pt-3">
+                    <label class="font-weight-bold">1. Контактні дані</label>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 col-form-label">Ім'я</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputName" placeholder="Ім'я та прізвище">
+                    </div>
+                    <label id="wrongName" class="col-sm-2 col-form-label">Ім'я та прізвище неправильно задані!</label>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Телефон</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="+380663415610">
+                    </div>
+                    <label id="wrongPhone" class="col-sm-2 col-form-label">Телефон неправильний!</label>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress" class="col-sm-2 col-form-label">Адреса</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="вулиця Григорія Сковороди, 2, Київ, 04655">
+                    </div>
+                </div>
+                <div class="form-group row  mt-5" id="orderInfo">
+                    <div class="col-sm-10">
+                        <p class="font-weight-bold h4">Інформація про замовлення</p>
+                    </div>
+                    <div class="col-sm-10">
+                        <p class="font-weight-bold pt-4">Приблизний час доставлення: <span id="order-time-field" class="font-weight-normal pl-1">Невідомий</span></p>
+                    </div>
+                    <div class="col-sm-10">
+                        <p class="font-weight-bold pt-3">Адреса доставлення: <span id="address-field" class="font-weight-normal pl-1">Невідомо</span></p>
+                    </div>
+
+                </div>
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-warning" id="makeOrder" style="color: white; background: #ea862e;">Далі ></button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<div class="sidebar">
+    <div class="container p-0">
+        <div class="card order rounded-0">
+            <div class="card-header justify-content-between align-items-center d-flex p-2">
+                <span class="d-flex align-items-center mr-auto">Замовлення<span class="badge badge-pill order-quantity">0</span></span>
+                <button class="text-secondary delete btn" disabled>Очистити замовлення</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart"></div>
+    <div class="row-fluid d-flex flex-column justify-content-between" id="to-order">
+        <div class="row d-flex align-items-center justify-content-between m-0 pb-0 pt-2 pl-2 pr-2">
+            <span>Сума замовлення</span>
+            <span id="total">0 грн</span>
+            <button type="button" class="btn btn-order">Повернутися назад</button>
+        </div>
+    </div>
+</div>
+
+<div id="googleMap"></div>
+<script	type="text/javascript"
+           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqsIsJf5p0wxIzQ32tEHwGWYogAsA8aWw">
+</script>
+
+<% include common/footer.ejs %>

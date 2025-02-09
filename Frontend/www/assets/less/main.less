@@ -1,0 +1,96 @@
+@import "pizza-card";
+@import "navbar";
+@import "sidebar";
+@import "order";
+
+@mainColor: #ec6a1c;
+@sidebarWidth:325px;
+@navbarHeight:90px;
+
+body {
+  background-color: #f5e7d5;
+  min-width: 600px;
+}
+.discount{
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  position: fixed;
+  left: 6px;
+  bottom: 0px;
+  height: 110px;
+  width: 110px;
+  background: #ea862e;
+
+  h6{
+    margin-top: -16px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+  span{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border-top: 3px dotted darken(#ea862e,20%);
+    margin-bottom: -74px;
+  }
+}
+
+.main{
+  padding-right: @sidebarWidth;
+  h2{
+    font-weight: bold;
+    padding-top: 20px;
+    span{
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+  #container-choice{
+    .badge-pill{
+      background: #ec890e;
+      color: white;
+    }
+    .btn{
+      height: 46px;
+      margin: 4px;
+      color: #ec890e;
+    }
+    .btn-selected{
+      background: #ec890e;
+      color: white;
+      font-size: 18px;
+    }
+  }
+  .price{
+    margin:auto;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .hryvnya{
+    margin: 0 20px 10px;
+    font-size: 17px;
+  }
+  .btn-buy{
+    height: 46px;
+    margin: 4px;
+    background: #ec890e;
+    color: white;
+  }
+}
+
+#pizza_list{
+  .badge-info{
+    position: absolute;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    padding: 6px 10px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+
+

@@ -1,0 +1,29 @@
+<div class="card pizzas-order rounded-0 d-flex flex-row">
+    <div class="col-9 p-0">
+        <div class="row ml-0">
+            <h5 class="mr-2"><%= pizza.title %> <%if(size == "small_size"){%>(мала)<%}else if(size == "big_size"){%>(велика)<%}%></h5>
+        </div>
+        <div class="row ml-0 d-flex align-items-center">
+                    <span class="badge">
+                        <img src="assets/images/size-icon.svg" class="p-0 pr-1">
+                        <%= pizza[size].size %>
+                    </span>
+            <span class="badge">
+                        <img src="assets/images/weight.svg" class="p-0 pr-1">
+                        <%= pizza[size].weight %>
+                    </span>
+        </div>
+        <div class="row ml-0">
+            <div class="btn-toolbar d-flex align-items-center flex-wrap">
+                <h6 class="price order-sm-1 mr-2"><%= pizza[size].price*quantity %> грн</h6>
+                <button type="button" class="btn btn-not-close btn-danger btn-circle order-sm-2 mr-1 minus">-</button>
+                <span class="font-weight-bold order-sm-3 mr-1"><%= quantity%></span>
+                <button type="button" class="btn btn-not-close btn-success btn-circle order-sm-4 mr-2 plus">+</button>
+                <button type="button" class="btn btn-outline-warning btn-light btn-circle order-sm-5 close">&times;</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 p-0 img-wrap">
+        <img class="bg-img" src="<%= pizza.icon%>">
+    </div>
+</div>
